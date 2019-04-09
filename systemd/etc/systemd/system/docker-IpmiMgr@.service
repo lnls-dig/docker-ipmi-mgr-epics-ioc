@@ -9,11 +9,11 @@ RestartSec=2
 EnvironmentFile=/etc/sysconfig/docker-ipmi-mgr-epics-ioc
 EnvironmentFile=/etc/sysconfig/docker-ipmi-mgr-epics-ioc-mapping
 Environment=IMAGE_VERSION=0.1.0-base-3.15-debian-9
-# Used inside runARAmp script
+# Used inside runIpmiMgr script
 Environment=IPMIMGR_INSTANCE=%i
 ExecStartPre=-/usr/bin/docker pull lnlsdig/ipmi-mgr-epics-ioc:${IMAGE_VERSION}
-ExecStart=/usr/local/bin/runARAmp.sh
-ExecStop=/usr/local/bin/stopARAmp.sh
+ExecStart=/usr/local/bin/runIpmiMgr.sh
+ExecStop=/usr/local/bin/stopIpmiMgr.sh
 
 [Install]
 WantedBy=multi-user.target
