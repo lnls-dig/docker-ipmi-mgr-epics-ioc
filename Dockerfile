@@ -2,11 +2,11 @@ FROM lnls/epics-dist:base-3.15-debian-9
 
 # Needed external module
 ENV IPMICOMM_REPO ipmiComm
-ENV IPMICOMM_COMMIT d5a5e5d0b29f4f4d78bafdb132fa52fba8fc2ee2
+ENV IPMICOMM_COMMIT LNLS-R4-3-0
 
 ENV IOC_REPO ipmi-mgr-epics-ioc
 ENV BOOT_DIR iocIpmiMgr
-ENV IOC_COMMIT fc9e8fc36b8d4d69e2d1fd40df9c319937376f89
+ENV IOC_COMMIT v0.2.0
 
 RUN git clone https://github.com/lnls-dig/${IPMICOMM_REPO}.git /opt/epics/${IPMICOMM_REPO} && \
     cd /opt/epics/${IPMICOMM_REPO} && \
