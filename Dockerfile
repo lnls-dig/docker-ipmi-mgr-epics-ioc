@@ -6,7 +6,7 @@ ENV IPMICOMM_COMMIT LNLS-R4-3-1
 
 ENV IOC_REPO ipmi-mgr-epics-ioc
 ENV BOOT_DIR iocIpmiMgr
-ENV IOC_COMMIT v0.2.0
+ENV IOC_COMMIT v0.4.0
 
 RUN git clone https://github.com/lnls-dig/${IPMICOMM_REPO}.git /opt/epics/${IPMICOMM_REPO} && \
     cd /opt/epics/${IPMICOMM_REPO} && \
